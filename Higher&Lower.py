@@ -82,19 +82,52 @@ class Deck:
                 if final_card.value > initial_card.value:
                     points += 1
                     print("Correct! Your score is:", points)
+                    cont = str(input("Would you like to continue?"))
+                    if cont in ["yes", "Yes", "YES", "YE", "ye", "y", "Y", "YEs", "YeS", "yeS", "yES", "yEs", "yE"]:
+                        pass
+                    elif cont in ["no", "No", "nO", "NO", "n", "o", "nuh uh", "fym nuh uh", "nah", "never", "I refuse"]:
+                        print("Your score was:", points, "points.")
+                        break
+                    else:
+                        print("learn to type, dummy")
+                        break
                 elif final_card.value == initial_card.value:
                     print("Same card. No points.")
-                else:
-                    print("Wrong! Your score was:", points)
-                    break
+                    cont = str(input("Would you like to continue?"))
+                    if cont in ["yes", "Yes", "YES", "YE", "ye", "y", "Y", "YEs", "YeS", "yeS", "yES", "yEs", "yE"]:
+                        pass
+                    elif cont in ["no", "No", "nO", "NO", "n", "o", "nuh uh", "fym nuh uh", "nah", "never", "I refuse"]:
+                        print("Your score was:", points, "points.")
+                        break
+                    else:
+                        print("Wrong! Your score is 0!")
+                        break
             elif choice in ["lower", "l"]:
                 if final_card.value < initial_card.value:
                     points += 1
                     print("Correct! Your score is:", points)
+                    cont = str(input("Would you like to continue?"))
+                    if cont in ["yes", "Yes", "YES", "YE", "ye", "y", "Y", "YEs", "YeS", "yeS", "yES", "yEs", "yE"]:
+                        pass
+                    elif cont in ["no", "No", "nO", "NO", "n", "o", "nuh uh", "fym nuh uh", "nah", "never", "I refuse"]:
+                        print("Your score was:", points, "points.")
+                        break
+                    else:
+                        print("Wrong! Your score is 0!")
+                        break
                 elif final_card.value == initial_card.value:
                     print("Same card. No points.")
+                    cont = str(input("Would you like to continue?"))
+                    if cont in ["yes", "Yes", "YES", "YE", "ye", "y", "Y", "YEs", "YeS", "yeS", "yES", "yEs", "yE"]:
+                        pass
+                    elif cont in ["no", "No", "nO", "NO", "n", "o", "nuh uh", "fym nuh uh", "nah", "never", "I refuse"]:
+                        print("Your score was:", points, "points.")
+                        break
+                    else:
+                        print("Wrong! Your score is 0!")
+                        break
                 else:
-                    print("Wrong! Your score was:", points)
+                    print("Wrong! Your score is 0!")
                     break
             else:
                 print("Invalid input. Please type 'Higher' or 'Lower'.")
@@ -105,50 +138,3 @@ class Deck:
 if __name__ == "__main__":
     deck = Deck()
     deck.game()
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
